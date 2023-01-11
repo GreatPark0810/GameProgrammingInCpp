@@ -50,12 +50,12 @@ bool Game::Initialize() {
 	m_balls.push_back(Ball(
 		Vector2(thickness, thickness), 
 		Vector2(window_width / 2.0f, window_height * 0.3f),
-		Vector2(-100.0f, 100.0f)
+		Vector2(-200.0f, 250.0f)
 	));
 	m_balls.push_back(Ball(
 		Vector2(thickness, thickness), 
 		Vector2(window_width / 2.0f, window_height * 0.7f),
-		Vector2(100.0f, -100.0f)
+		Vector2(250.0f, -200.0f)
 	));
 
 	m_paddles.push_back(Paddle(
