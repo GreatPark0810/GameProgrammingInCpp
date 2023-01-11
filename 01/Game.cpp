@@ -124,7 +124,8 @@ void Game::ProcessInput() {
 	else if (state[SDL_SCANCODE_S]) {
 		m_paddles[0].direction += 1;
 	}
-	else if (state[SDL_SCANCODE_UP]) {
+
+	if (state[SDL_SCANCODE_UP]) {
 		m_paddles[1].direction -= 1;
 	}
 	else if (state[SDL_SCANCODE_DOWN]) {
