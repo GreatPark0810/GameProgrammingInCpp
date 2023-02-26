@@ -45,7 +45,7 @@ class Actor {
 
         float GetRotation() const { return mRotation; }
         void SetRotation(float r) { mRotation = r; }
-
+        
         class Game* GetGame() const { return mGame; }
 
     private:

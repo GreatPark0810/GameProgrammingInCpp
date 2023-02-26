@@ -74,7 +74,7 @@ class Game {
 		Uint32 mTicksCount;
 
         // 게임 내의 우주선 오브젝트
-        class Ship* mShip;
+        class Player* mPlayer;
 
         // 윈도우 창 가로 픽셀
         const int WindowWidth;

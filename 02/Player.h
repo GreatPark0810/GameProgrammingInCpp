@@ -3,10 +3,10 @@
 #include "Actor.h"
 #include <stdint.h>
 
-class Ship : public Actor {
+class Player : public Actor {
     public:
         // Ship 오브젝트 생성자
-        Ship(class Game* game);
+        Player(class Game* game);
         // Ship 액터에 특화된 업데이트 코드 (Actor 클래스에서 오버라이드)
         void UpdateActor(float deltaTime) override;
         // 키보드 입력 처리 함수
@@ -22,4 +22,7 @@ class Ship : public Actor {
         float mRightSpeed;
         // 상(-)하(+) 이동 속도
         float mDownSpeed;
+        
+        // 애니메이션 컴포넌트를 가리키는 포인터
+        class AnimSpriteComponent* mAnimComponent;
 };

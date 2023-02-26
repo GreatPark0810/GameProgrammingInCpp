@@ -1,7 +1,7 @@
 #include "SDL2/SDL_image.h"
 #include "Game.h"
 #include "Actor.h"
-#include "Ship.h"
+#include "Player.h"
 #include "SpriteComponent.h"
 #include "BGSpriteComponent.h"
 #include <algorithm>
@@ -188,7 +188,7 @@ void Game::ProcessInput() {
 	}
 
 	// 우주선의 입력 처리
-	mShip->ProcessKeyboard(state);
+	mPlayer->ProcessKeyboard(state);
 }
 
 void Game::UpdateGame() {
@@ -246,9 +246,9 @@ void Game::GenerateOutput() {
 }
 
 void Game::LoadData() {
-	mShip = new Ship(this);
-	mShip->SetPosition(Vector2(100.0f, WindowHeight/2));
-	mShip->SetScale(1.5f);
+	mPlayer = new Player(this);
+	mPlayer->SetPosition(Vector2(100.0f, WindowHeight/2));
+	mPlayer->SetScale(1.5f);
 
 	Actor* gameManager = new Actor(this);
 	gameManager->SetPosition(Vector2(GetWindowWidth()/2, GetWindowHeight()/2));
